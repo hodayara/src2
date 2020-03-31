@@ -13,8 +13,8 @@ public class TubeTest {
     @Test
     public void getNormal()
     {
-        Tube t = new Tube(new Ray(new Vector(1,0,0),new Point3D(0,0,0)),1);
+        Tube t = new Tube(new Ray(new Vector(0,1,0),new Point3D(0,0,1)),1.0);
         // ============ Equivalence Partitions Tests ==============
-        assertEquals("getNormal() result is not good",new Vector(0,1,0),t.getNormal(new Point3D(0,1,0)));
+        assertEquals("getNormal() result is not good",new Vector(0,0,1),t.getNormal(new Point3D(0,0.5,2)));
     }
 }
